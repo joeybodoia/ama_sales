@@ -37,8 +37,8 @@ function AboutUs() {
             </div>
 
             {/* Navigation Bar */}
-            <div className="bg-gray-800 py-3 px-8">
-              <nav className="flex justify-center space-x-8">
+            <div className="bg-gray-800 py-3 px-4 sm:px-8">
+              <nav className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8">
                 <Link
                   to="/"
                   className="text-white font-medium px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200"
@@ -58,27 +58,27 @@ function AboutUs() {
             </div>
 
             {/* Hero Image Section */}
-            <div className="p-8">
+            <div className="p-4 sm:p-8">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
                   src="/spa_pic.png"
                   alt="Luxury Spa and Outdoor Living"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
                 />
               </div>
             </div>
 
             {/* About Us Content Section */}
-            <div className="px-8 pb-12">
-              <div className="flex flex-col lg:flex-row gap-8 mb-12">
+            <div className="px-4 sm:px-8 pb-12">
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-12">
                 {/* Where to find us - Left Column (30%) */}
-                <div className="lg:w-3/10 flex-shrink-0">
-                  <h2 className="text-2xl font-bold text-green-600 mb-6">
+                <div className="lg:w-3/10 flex-shrink-0 order-2 lg:order-1">
+                  <h2 className="text-xl sm:text-2xl font-bold text-green-600 mb-4 sm:mb-6">
                     Where to find us:
                   </h2>
                   <div className="space-y-3 text-gray-600">
-                    <p className="font-medium text-gray-700 mb-4">States we serve:</p>
-                    <div className="space-y-2 text-sm">
+                    <p className="font-medium text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">States we serve:</p>
+                    <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                       <p>• Arkansas (AR)</p>
                       <p>• Arizona (AZ)</p>
                       <p>• Colorado (CO)</p>
@@ -103,15 +103,15 @@ function AboutUs() {
                 </div>
 
                 {/* About Us - Right Column (70%) */}
-                <div className="lg:w-7/10 flex-grow">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                <div className="lg:w-7/10 flex-grow order-1 lg:order-2">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
                     About Us
                   </h2>
-                  <div className="text-gray-600 leading-relaxed space-y-6">
-                    <p className="text-lg">
+                  <div className="text-gray-600 leading-relaxed space-y-4 sm:space-y-6">
+                    <p className="text-base sm:text-lg">
                       At AMA Sales Co., our goal is to make running and supplying your outdoor living business as simple and efficient as possible. By serving as your single point of contact, we eliminate the hassle of working with multiple vendors, save you time, and ensure your receive high quality products and reliable solutions.
                     </p>
-                    <p className="text-lg">
+                    <p className="text-base sm:text-lg">
                       Our mission is to help your business grow by making the planning, sourcing, and purchasing of your outdoor products simple, efficient and completely stress free.
                     </p>
                   </div>
@@ -122,7 +122,7 @@ function AboutUs() {
               <div className="text-center">
                 <Link
                   to="/"
-                  className="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                  className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors duration-200 text-sm sm:text-base"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Home
