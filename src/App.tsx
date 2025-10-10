@@ -99,7 +99,7 @@ function Home() {
                   Get In Touch
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 mb-8 text-center px-2">
-                  Have questions about our products or services? Send us a message!
+                  Interested in a product or have questions our services? Send us a message!
                 </p>
                 
                 <div className="max-w-2xl mx-auto">
@@ -404,7 +404,7 @@ function Home() {
                   Get In Touch
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 mb-8 text-center px-2">
-                  Have questions about our products or services? Send us a message!
+                  Interested in a product or have questions our services? Send us a message!
                 </p>
                 
                 <div className="max-w-2xl mx-auto">
