@@ -7,15 +7,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // ✅ Keep this
 
 app.use(express.json());
 
 // API
 app.use(contactRouter);
 
-// Serve React build
-const distPath = path.join(__dirname, "..", "dist");
+// Serve React build (fixed path)
+const distPath = path.resolve(__dirname, "../../dist");
 app.use(express.static(distPath));
 
 // SPA fallback
