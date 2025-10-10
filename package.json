@@ -5,15 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:server": "tsx watch src/server/server.ts",
-    "dev:full": "concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "heroku-postbuild": "npm run build",
-    "start": "serve -s dist"
+    "start": "node src/server/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
