@@ -35,7 +35,12 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        throw new Error('Server is not responding properly. Please try again later.');
+      }
 
       if (response.ok && data.ok) {
         setStatus('success');
@@ -47,7 +52,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       }
     } catch (error) {
       setStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message');
+      setErrorMessage(error instanceof Error ? error.message : 'Server connection failed. Please try again later.');
     }
   };
 
