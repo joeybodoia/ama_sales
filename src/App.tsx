@@ -104,7 +104,7 @@ function Home() {
                 
                 <div className="max-w-2xl mx-auto">
                   <form 
-                    action="mailto:maw@amasalesco.com" 
+                    action="mailto:jbodoia@gmail.com" 
                     method="post" 
                     encType="text/plain"
                     className="space-y-6"
