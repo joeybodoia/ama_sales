@@ -93,6 +93,77 @@ function Home() {
                 </div>
               </div>
 
+              {/* Contact Form Section */}
+              <div className="mt-16 pt-8 border-t border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center">
+                  Get In Touch
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 mb-8 text-center px-2">
+                  Have questions about our products or services? Send us a message!
+                </p>
+                
+                <div className="max-w-2xl mx-auto">
+                  <form 
+                    action="mailto:maw@amasalesco.com" 
+                    method="post" 
+                    encType="text/plain"
+                    className="space-y-6"
+                  >
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows={5}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 resize-vertical"
+                        placeholder="Tell us about your project or ask any questions..."
+                      ></textarea>
+                    </div>
+                    
+                    <div className="text-center">
+                      <button
+                        type="submit"
+                        className="inline-flex items-center px-8 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200 transform hover:scale-105"
+                      >
+                        <Mail className="w-5 h-5 mr-2" />
+                        Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
               {/* Partner Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8">
                 {/* Dynamic Outdoor Living Solutions */}
