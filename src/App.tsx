@@ -1,29 +1,27 @@
-import React from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { Sun, Waves, ExternalLink, Mail } from 'lucide-react';
-import AboutUs from './pages/AboutUs';
-import ContactForm from './components/ContactForm';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { ExternalLink, Mail } from "lucide-react";
+import AboutUs from "./pages/AboutUs";
+import ContactForm from "./components/ContactForm";
 
 function Home() {
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-us');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    const el = document.getElementById("contact-us");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Fixed Background */}
-      <div 
+      <div
         className="fixed inset-0 bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/background_img.jpg')",
-          backgroundSize: 'cover',
-          backgroundColor: 'black'
+          backgroundSize: "cover",
+          backgroundColor: "black",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-30" />
       </div>
 
       {/* Scrollable Content Container */}
@@ -31,14 +29,13 @@ function Home() {
         <div className="w-full max-w-4xl">
           {/* Main Content Card */}
           <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
-            
             {/* Logo Section */}
             <div className="pt-12 pb-8 px-8 text-center">
               <div className="flex items-center justify-center">
                 <div className="bg-white rounded-full border-4 border-black p-4 shadow-lg">
-                  <img 
-                    src="https://i.imgur.com/hCyhd30.png" 
-                    alt="AMA Sales Co. Logo" 
+                  <img
+                    src="https://i.imgur.com/hCyhd30.png"
+                    alt="AMA Sales Co. Logo"
                     className="max-h-16 w-auto"
                   />
                 </div>
@@ -79,22 +76,30 @@ function Home() {
 
             {/* Content Section */}
             <div className="px-4 sm:px-8 pb-12">
-              {/* Company Description Section */}
+              {/* Company Description */}
               <div className="text-center mb-12">
                 <div className="max-w-4xl mx-auto text-gray-600 leading-relaxed text-sm sm:text-base">
                   <p className="mb-4 px-2">
-                    At AMA Sales Co, our goal is to make running and supplying your outdoor living business as simple and efficient as possible. By serving as your single point of contact, we eliminate the hassle of working with multiple vendors, save you time, and ensure your receive high quality products and reliable solutions.
+                    At AMA Sales Co, our goal is to make running and supplying
+                    your outdoor living business as simple and efficient as
+                    possible. By serving as your single point of contact, we
+                    eliminate the hassle of working with multiple vendors, save
+                    you time, and ensure your receive high quality products and
+                    reliable solutions.
                   </p>
                   <p className="mb-4 px-2">
-                    Our mission is to help your business grow by making the planning, sourcing, and purchasing of your outdoor products simple, efficient and completely stress free.
+                    Our mission is to help your business grow by making the
+                    planning, sourcing, and purchasing of your outdoor products
+                    simple, efficient and completely stress free.
                   </p>
                   <p className="px-2">
-                    Please visit the websites below (by clicking on the company logo) for product information.
+                    Please visit the websites below (by clicking on the company
+                    logo) for product information.
                   </p>
                 </div>
               </div>
 
-              {/* Contact Form Component */}
+              {/* Contact Form (render once) */}
               <ContactForm />
 
               {/* Partner Cards */}
@@ -330,10 +335,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-
-              {/* Contact Form Section */}
-            {/* Contact Form Component */}
-            <ContactForm />
+            </div>
           </div>
         </div>
       </div>
@@ -342,13 +344,13 @@ function Home() {
 }
 
 function App() {
-                }
-  )
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<AboutUs />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+    </Router>
   );
 }
 
