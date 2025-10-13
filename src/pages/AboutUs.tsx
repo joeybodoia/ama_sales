@@ -90,17 +90,17 @@ function AboutUs() {
                     <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                       <p>• Arkansas (AR)</p>
                       <p>• Arizona (AZ)</p>
+                      <p>• California (CA)</p>
                       <p>• Colorado (CO)</p>
                       <p>• Idaho (ID)</p>
                       <p>• Kansas (KS)</p>
                       <p>• Louisiana (LA)</p>
                       <p>• Missouri (MO)</p>
                       <p>• Montana (MT)</p>
-                      <p>• California (CA)</p>
                       <p>• Nevada (NV)</p>
                       <p>• New Mexico (NM)</p>
                       <p>• Oklahoma (OK)</p>
-                      <p>• Oregon</p>
+                      <p>• Oregon (OR)</p>
                       <p>• Texas (TX)</p>
                       <p>• Utah (UT)</p>
                       <p>• Washington (WA)</p>
