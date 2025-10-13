@@ -13,9 +13,15 @@ const transporter = nodemailer.createTransport({
 
 router.post("/api/contact", async (req, res) => {
   try {
-    const { name, email, message } = req.body || {};
+    const { name, email, vendors, message } = req.body || {};
     if (!name || !email || !message) {
       return res.status(400).json({ error: "All fields are required." });
+    }
+
+    // Format the email body with vendor information
+    let emailBody = message;
+    if (vendors && vendors.length > 0) {
+      emailBody = `Interested Vendors: ${vendors.join(', ')}\n\n${message}`;
     }
 
     await transporter.sendMail({
@@ -23,7 +29,7 @@ router.post("/api/contact", async (req, res) => {
       from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
       replyTo: email,
       subject: `New inquiry from: ${name}`.slice(0, 120),
-      text: message,
+      text: emailBody,
       // html: `<p>${message.replace(/\n/g, "<br>")}</p>`,
     });
 

@@ -9,15 +9,36 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    vendors: [] as string[],
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const vendorOptions = [
+    'Dynamic Outdoor Living Solutions',
+    'Visscher Specialty',
+    'Outdoor Kitchens | BBQ Islands | Kokomo Grills',
+    'Aspen Spas',
+    'InnovaSpa',
+    'The Spa Dragon',
+    'Kokomo Grills',
+    'Patio Resorts',
+    'Omni Digital Marketing'
+  ];
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleVendorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedOptions = Array.from(e.target.selectedOptions, option => option.value);
+    setFormData(prev => ({
+      ...prev,
+      vendors: selectedOptions
     }));
   };
 
@@ -30,7 +51,12 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       const response = await fetch("/api/contact", {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: formData.name, email: formData.email, message: formData.message }),
+        body: JSON.stringify({ 
+          name: formData.name, 
+          email: formData.email, 
+          vendors: formData.vendors,
+          message: formData.message 
+        }),
       });
 
       let data;
@@ -42,7 +68,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       if (response.ok && data.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', vendors: [], message: '' });
         // Reset success message after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
       } else {
@@ -111,6 +137,31 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="your.email@example.com"
             />
+          </div>
+          
+          <div>
+            <label htmlFor="vendors" className="block text-sm font-medium text-gray-700 mb-2">
+              Which Vendor(s) are you interested in?
+            </label>
+            <select
+              id="vendors"
+              name="vendors"
+              multiple
+              value={formData.vendors}
+              onChange={handleVendorChange}
+              disabled={status === 'sending'}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+              size={5}
+            >
+              {vendorOptions.map((vendor) => (
+                <option key={vendor} value={vendor}>
+                  {vendor}
+                </option>
+              ))}
+            </select>
+            <p className="text-xs text-gray-500 mt-1">
+              Hold Ctrl (or Cmd on Mac) to select multiple vendors
+            </p>
           </div>
           
           <div>
