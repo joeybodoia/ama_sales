@@ -96,13 +96,11 @@ function AboutUs() {
                       <p>• Louisiana (LA)</p>
                       <p>• Missouri (MO)</p>
                       <p>• Montana (MT)</p>
-                      <p>• Southern/Central California</p>
+                      <p>• California (CA)</p>
                       <p>• Nevada (NV)</p>
                       <p>• New Mexico (NM)</p>
-                      <p>• Northern California</p>
                       <p>• Oklahoma (OK)</p>
                       <p>• Oregon</p>
-                      <p>• Southern/Central California</p>
                       <p>• Texas (TX)</p>
                       <p>• Utah (UT)</p>
                       <p>• Washington (WA)</p>
