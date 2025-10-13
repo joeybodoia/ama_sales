@@ -177,7 +177,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               onChange={handleChange}
               disabled={status === 'sending'}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 resize-vertical disabled:bg-gray-100 disabled:cursor-not-allowed"
-              placeholder="Tell us about your project or ask any questions..."
+              placeholder="Provide any further details and/or questions you may have regarding vendors/products..."
             ></textarea>
           </div>
           

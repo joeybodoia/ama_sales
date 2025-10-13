@@ -26,7 +26,7 @@ router.post("/api/contact", async (req, res) => {
 
     await transporter.sendMail({
       to: "jbodoia@gmail.com",
-      from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
+      from: `"AMA Sales Co Contact Form" <${process.env.SMTP_USER}>`,
       replyTo: email,
       subject: `New inquiry from: ${name}`.slice(0, 120),
       text: emailBody,
