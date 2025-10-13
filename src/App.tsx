@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink, Mail, Facebook } from "lucide-react";
 import AboutUs from "./pages/AboutUs";
 import ContactForm from "./components/ContactForm";
 
@@ -44,7 +44,7 @@ function Home() {
 
             {/* Navigation Bar */}
             <div className="bg-gray-800 py-3 px-4 sm:px-8">
-              <nav className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8">
+              <nav className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8">
                 <span className="text-white font-medium px-4 py-2 rounded-md bg-gray-900">
                   Home
                 </span>
@@ -60,6 +60,15 @@ function Home() {
                 >
                   About Us
                 </Link>
+                <a
+                  href="https://www.facebook.com/amasalesco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-blue-400 transition-colors duration-200 p-2"
+                  aria-label="Visit AMA Sales Co on Facebook"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
               </nav>
             </div>
 
