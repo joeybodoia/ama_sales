@@ -17,15 +17,15 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const [errorMessage, setErrorMessage] = useState('');
 
   const vendorOptions = [
-    'Dynamic Outdoor Living Solutions',
-    'Visscher Specialty',
-    'Outdoor Kitchens | BBQ Islands | Kokomo Grills',
-    'Aspen Spas',
-    'InnovaSpa',
-    'The Spa Dragon',
-    'Kokomo Grills',
-    'Patio Resorts',
-    'Omni Digital Marketing'
+    'Cover lifters, spa steps and other hot tub accessories',
+    'Outdoor structures, gazebos and outdoor saunas',
+    'Island grills, grill inserts and appliances',
+    'Acrylic hot tubs',
+    'Roto molded hot tubs',
+    'Emergency hot tub cabinet heater',
+    'Outdoor patio furniture',
+    'Digital marketing campaigns',
+    'Infrared and traditional saunas'
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
