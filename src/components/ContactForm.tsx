@@ -43,6 +43,15 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     }));
   };
 
+  const handleCheckboxChange = (vendor: string) => {
+    setFormData(prev => ({
+      ...prev,
+      vendors: prev.vendors.includes(vendor)
+        ? prev.vendors.filter(v => v !== vendor)
+        : [...prev.vendors, vendor]
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
@@ -160,25 +169,20 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             <label htmlFor="vendors" className="block text-sm font-medium text-gray-700 mb-2">
               Which product(s) are you interested in? Click all that apply
             </label>
-            <select
-              id="vendors"
-              name="vendors"
-              multiple
-              value={formData.vendors}
-              onChange={handleVendorChange}
-              disabled={status === 'sending'}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
-              size={5}
-            >
+            <div className="space-y-3 p-4 border border-gray-300 rounded-lg bg-gray-50">
               {vendorOptions.map((vendor) => (
-                <option key={vendor} value={vendor}>
-                  {vendor}
-                </option>
+                <label key={vendor} className="flex items-start space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formData.vendors.includes(vendor)}
+                    onChange={() => handleCheckboxChange(vendor)}
+                    disabled={status === 'sending'}
+                    className="mt-1 h-4 w-4 text-gray-600 focus:ring-gray-500 border-gray-300 rounded disabled:cursor-not-allowed"
+                  />
+                  <span className="text-sm text-gray-700 leading-5">{vendor}</span>
+                </label>
               ))}
-            </select>
-            <p className="text-xs text-gray-500 mt-1">
-              Hold Ctrl (or Cmd on Mac) to select multiple vendors
-            </p>
+            </div>
           </div>
           
           <div>
