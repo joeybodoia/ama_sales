@@ -13,15 +13,19 @@ const transporter = nodemailer.createTransport({
 
 router.post("/api/contact", async (req, res) => {
   try {
-    const { name, email, vendors, message } = req.body || {};
+    const { name, email, phone, vendors, message } = req.body || {};
     if (!name || !email || !message) {
       return res.status(400).json({ error: "All fields are required." });
     }
 
     // Format the email body with vendor information
     let emailBody = message;
+    if (phone) {
+      emailBody = `Phone: ${phone}\n\n${emailBody}`;
+    }
     if (vendors && vendors.length > 0) {
-      emailBody = `Interested Vendors: ${vendors.join(', ')}\n\n${message}`;
+      const vendorText = `Interested Vendors: ${vendors.join(', ')}\n\n`;
+      emailBody = phone ? vendorText + emailBody : vendorText + emailBody;
     }
 
     await transporter.sendMail({

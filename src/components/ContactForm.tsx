@@ -9,6 +9,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     vendors: [] as string[],
     message: ''
   });
@@ -68,7 +69,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       if (response.ok && data.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', vendors: [], message: '' });
+        setFormData({ name: '', email: '', phone: '', vendors: [], message: '' });
         // Reset success message after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
       } else {
@@ -136,6 +137,22 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               disabled={status === 'sending'}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="your.email@example.com"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              disabled={status === 'sending'}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+              placeholder="(555) 123-4567"
             />
           </div>
           
