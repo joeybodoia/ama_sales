@@ -158,7 +158,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           
           <div>
             <label htmlFor="vendors" className="block text-sm font-medium text-gray-700 mb-2">
-              Which Vendor(s) are you interested in?
+              Which product(s) are you interested in? Click all that apply
             </label>
             <select
               id="vendors"
