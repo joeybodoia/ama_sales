@@ -279,7 +279,7 @@ function Home() {
                   <div className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200">
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center text-white">Michael White</h3>
                     <div className="space-y-2 text-center">
-                      <p className="text-gray-300 font-medium text-sm sm:text-base">CO, ID, MT, NM, UT</p>
+                      <p className="text-gray-300 font-medium text-sm sm:text-base">NM, TX</p>
                       <p className="text-white font-semibold text-sm sm:text-base">602.405.1221</p>
                       <a href="mailto:maw@amasalesco.com" className="text-white hover:text-gray-300 flex items-center justify-center text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
@@ -305,7 +305,7 @@ function Home() {
                   <div className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200">
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center text-white">Rodney Eudy</h3>
                     <div className="space-y-2 text-center">
-                      <p className="text-gray-300 font-medium text-sm sm:text-base">Northern CA, Oregon, WA</p>
+                      <p className="text-gray-300 font-medium text-sm sm:text-base">Northern CA, ID (CDA and Boise), Oregon, WA</p>
                       <p className="text-white font-semibold text-sm sm:text-base">503.930.1055</p>
                       <a href="mailto:rodney@amasalesco.com" className="text-white hover:text-gray-300 flex items-center justify-center text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
@@ -318,7 +318,7 @@ function Home() {
                   <div className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200">
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center text-white">Todd Holmes</h3>
                     <div className="space-y-2 text-center">
-                      <p className="text-gray-300 font-medium text-sm sm:text-base">CO, WY</p>
+                      <p className="text-gray-300 font-medium text-sm sm:text-base">CO, Cheyenne WY</p>
                       <p className="text-white font-semibold text-sm sm:text-base">661.675.9675</p>
                       <a href="mailto:todd@amasalesco.com" className="text-white hover:text-gray-300 flex items-center justify-center text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
@@ -331,11 +331,24 @@ function Home() {
                   <div className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200">
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center text-white">Joe Hoover</h3>
                     <div className="space-y-2 text-center">
-                      <p className="text-gray-300 font-medium text-sm sm:text-base">AR, KS, LA, MO, OK, TX</p>
+                      <p className="text-gray-300 font-medium text-sm sm:text-base">AR, KS, LA, MO, NE, OK</p>
                       <p className="text-white font-semibold text-sm sm:text-base">423.435.2697</p>
                       <a href="mailto:jlh@amasalesco.com" className="text-white hover:text-gray-300 flex items-center justify-center text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
                         <span>jlh@amasalesco.com</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Russell Moody */}
+                  <div className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 text-center text-white">Russell Moody</h3>
+                    <div className="space-y-2 text-center">
+                      <p className="text-gray-300 font-medium text-sm sm:text-base">ID (East of Boise), MT, UT, WY</p>
+                      <p className="text-white font-semibold text-sm sm:text-base">480-466-6332</p>
+                      <a href="mailto:russell@amasalesco.com" className="text-white hover:text-gray-300 flex items-center justify-center text-sm sm:text-base">
+                        <Mail className="w-4 h-4 mr-2" />
+                        <span>russell@amasalesco.com</span>
                       </a>
                     </div>
                   </div>

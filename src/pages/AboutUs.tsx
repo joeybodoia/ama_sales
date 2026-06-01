@@ -97,6 +97,7 @@ function AboutUs() {
                       <p>• Louisiana (LA)</p>
                       <p>• Missouri (MO)</p>
                       <p>• Montana (MT)</p>
+                      <p>• Nebraska (NE)</p>
                       <p>• Nevada (NV)</p>
                       <p>• New Mexico (NM)</p>
                       <p>• Oklahoma (OK)</p>
