@@ -25,7 +25,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     'Emergency hot tub cabinet heater',
     'Outdoor patio furniture',
     'Digital marketing campaigns',
-    'Infrared and traditional saunas'
+    'Infrared and traditional saunas',
+    'Cold plunges'
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
