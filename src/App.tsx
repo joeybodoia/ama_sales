@@ -144,23 +144,6 @@ function Home() {
                   </div>
                 </a>
 
-                {/* Kokomo Grills Outdoor Kitchens */}
-                <a 
-                  href="https://www.kokomogrills.com/outdoor-kitchens" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 text-white border border-gray-700 rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 cursor-pointer"
-                >
-                  <div className="w-full h-24 sm:h-32 flex items-center justify-center mx-auto mb-4">
-                    <img src="https://i.imgur.com/p0GMDWR.png" alt="Kokomo Grills Outdoor Kitchens" className="w-48 sm:w-64 h-20 sm:h-32 object-contain rounded-lg" />
-                  </div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-3 text-center">OUTDOOR KITCHENS | BBQ Islands | Kokomo Grills</h3>
-                  <p className="text-gray-300 text-xs sm:text-sm text-center mb-3">3 island kitchen options that have a lifetime warranty! Best in the industry</p>
-                  <div className="flex justify-center">
-                    <ExternalLink className="w-4 h-4 text-gray-300" />
-                  </div>
-                </a>
-
                 {/* Aspen Spas */}
                 <a 
                   href="https://aspenspas.com/" 
